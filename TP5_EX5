@@ -1,0 +1,16 @@
+import json
+with open("etudiant.json","w") as fichier:
+    data = {
+    "person1": {"nom": "Alice", "age": 22, "note": 18},
+    "person2": {"nom": "SARA", "age": 30, "note": 15},
+    "person3": {"nom": "PABLO", "age": 23, "note":20}
+}
+   
+#ajouter les infos dans fihcier json avec dump:  
+with open('etudiant.json','w')as fichier:
+    json.dump(data,fichier,indent=4)
+
+#lire un fichier json avec load:
+with open('etudiant.json','r')as fichier:
+    datas=json.load(fichier)
+    print(datas)
